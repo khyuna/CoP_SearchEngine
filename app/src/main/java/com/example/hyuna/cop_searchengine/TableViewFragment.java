@@ -1,4 +1,6 @@
 package com.example.hyuna.cop_searchengine;
 
-public class TableViewFragment {
+import androidx.fragment.app.Fragment;
+
+public class TableViewFragment extends Fragment {
 }
