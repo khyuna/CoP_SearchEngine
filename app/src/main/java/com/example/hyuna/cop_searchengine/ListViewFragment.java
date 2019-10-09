@@ -35,4 +35,9 @@ public class ListViewFragment extends Fragment implements UIInterface{
     public void showLoading() {
 
     }
+
+    @Override
+    public String getKeywordText() {
+        return null;
+    }
 }

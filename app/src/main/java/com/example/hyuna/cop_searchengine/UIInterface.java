@@ -8,4 +8,6 @@ public interface UIInterface {
 
     //로딩화면
     public void showLoading();
+
+    public String getKeywordText();
 }
