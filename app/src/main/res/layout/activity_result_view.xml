@@ -31,16 +31,19 @@
                 android:text="TableView" />
 
         </LinearLayout>
-        <LinearLayout
+<RelativeLayout
+    android:id="@+id/parentView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <fragment
+            android:id="@+id/fragmentView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.95">
-            <androidx.viewpager.widget.ViewPager
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/viewPager"></androidx.viewpager.widget.ViewPager>
+            android:layout_weight="0.95"
+            >
 
-        </LinearLayout>
+        </fragment>
+</RelativeLayout>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

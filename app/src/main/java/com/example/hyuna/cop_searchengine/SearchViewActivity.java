@@ -1,54 +1,34 @@
 package com.example.hyuna.cop_searchengine;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SearchViewActivity extends AppCompatActivity implements UIInterface {
+public class SearchViewActivity extends AppCompatActivity {
 
-    private DataControllerInterface dataControllerInterface;
     private String keyword ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_view);
 
-        dataControllerInterface = new DataSearchController(this, new ResultList(getKeyword()));
-
-    }
-
-    @Override
-    public void drawImage() {
-
-    }
-
-    @Override
-    public void drawView() {
-
-    }
-
-    @Override
-    public void showLoading() {
+        //dataControllerInterface = new DataSearchController(this, new ResultList(getKeyword()));
 
     }
 
     public void onClick(View v){
         // onClick
-        dataControllerInterface.onClickEvent("keyword");
-    }
-
-    @Override
-    public String getKeywordText() {
-        //키워드
-        EditText keywordTv = (EditText) findViewById(R.id.keyword);
-        keyword = keywordTv.getText().toString();
-        return keyword;
+        Intent intent = new Intent(SearchViewActivity.this, ResultViewActivity.class);
+        intent.putExtra("keyword", getKeyword());
+        startActivity(intent);
     }
 
     public String getKeyword() {
+        String kw= findViewById(R.id.keyword).toString();
+        keyword = kw;
         return keyword;
     }
 }
