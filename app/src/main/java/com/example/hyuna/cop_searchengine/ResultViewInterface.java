@@ -1,8 +1,10 @@
 package com.example.hyuna.cop_searchengine;
 
-public interface UIInterface {
+import java.util.ArrayList;
+
+public interface ResultViewInterface {
     //이미지 그리기
-    public void drawImage();
+    public void drawImage(ArrayList<ImageData> resultList);
     //뷰 그리기
     public void drawView(int idx);
 
@@ -10,7 +12,8 @@ public interface UIInterface {
     public void showLoading();
     public void hideLoading();
 
-    public String getKeywordText();
 
+    public String getKeywordText();
+    public void showMessage(String message);
 
 }

@@ -6,8 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import javax.xml.transform.Result;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -22,9 +20,9 @@ public class ListViewFragment extends Fragment {
         final View listViewFragment = inflater.inflate(R.layout.fragment_list_view, container, false);
         rv = listViewFragment.findViewById(R.id.list_view);
 
-        RecyclerViewAdapter recycleViewAdapter = new RecyclerViewAdapter(list);
+       // RecyclerViewAdapter recycleViewAdapter = new RecyclerViewAdapter(list);
 
-        rv.setAdapter(recycleViewAdapter);
+        //rv.setAdapter(recycleViewAdapter);
 
         //선 넣기
         RecyclerView.ItemDecoration decoration = new DividerItemDecoration(getContext(),DividerItemDecoration.VERTICAL);
